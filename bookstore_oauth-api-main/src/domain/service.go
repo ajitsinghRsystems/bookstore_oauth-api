@@ -1,8 +1,25 @@
 package access_token
 
-import ("github.com/ajitsinghRsystems/bookstore_oauth-api-main/utils/errors"	
-)
+import "BookStore_OAuth-API-Main/utils/errors"
 
 type Service interface {
 	GetByID(string) (*AccessToken, *errors.RestErr)
+}
+
+type Repository interface{
+	GetByID(string) (*AccessToken, *errors.RestErr)
+}
+
+type service struct{
+repository Repository
+
+}
+func NewService( repo Repository) Service{
+return &service{
+	repository : repo,
+}
+}
+
+func (s *service) GetByID(string) (*AccessToken, *errors.RestErr){
+	return nil,nil
 }
