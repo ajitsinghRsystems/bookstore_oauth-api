@@ -1,4 +1,4 @@
-package access_token
+package accesstoken
 
 import "BookStore_OAuth-API-Main/utils/errors"
 

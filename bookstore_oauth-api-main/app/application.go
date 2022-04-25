@@ -1,12 +1,12 @@
 package app
 
 import ("BookStore_OAuth-API-Main/repository/db"
-		"BookStore_OAuth-API-Main/src/domain/access_token"
+		"BookStore_OAuth-API-Main/src/domain/accesstoken"
 )
 
 
 func StartApplication() {
 
-	atService := access_token.NewService(db.NeRepository())
+	atService := accesstoken.NewService(db.NeRepository())
 
 }
