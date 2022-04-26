@@ -25,6 +25,10 @@ func NewService(repo db.DbRepository) Service {
 	}
 }
 
-func (s *service) GetByID(string) (*access_token.AccessToken, *errors.RestErr) {
-	return nil, nil
+func (s *service) GetByID(accessTokenId string) (*access_token.AccessToken, *errors.RestErr) {
+	accessToken, err := s.repository.GetById(accessTokenId)
+	if err!=nil{
+		return nil,err
+	}
+	return accessToken, nil
 }
