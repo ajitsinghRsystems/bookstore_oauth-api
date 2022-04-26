@@ -1,7 +1,6 @@
-package accesstoken
+package access_token
 
 import (
-	
 	"time"
 )
 const(
